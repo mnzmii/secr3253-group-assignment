@@ -1,0 +1,10 @@
+---
+- name: Routing and Device Info Configuration (Part B)
+  hosts: routers
+  gather_facts: no
+  tasks:
+    - name: Configure interface description
+      cisco.ios.ios_config:
+        lines:
+          - description Connection to Main Office LAN
+        parents: interface GigabitEthernet1
