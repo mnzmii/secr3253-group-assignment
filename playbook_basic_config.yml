@@ -1,0 +1,11 @@
+---
+- name: Basic Network Configuration (Part A)
+  hosts: routers
+  gather_facts: no
+  tasks:
+    - name: Configure IP address on interface GigabitEthernet1
+      cisco.ios.ios_config:
+        lines:
+          - ip address 192.168.1.10 255.255.255.0
+          - no shutdown
+        parents: interface GigabitEthernet1
