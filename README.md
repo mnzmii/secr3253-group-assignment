@@ -1,4 +1,4 @@
-# SECR3253 Network Programming & Automation Project
+# SECR3253 Network Programming Group Assignment
 
 ## 👥 Group Members
 * **Muhammad Nazmi bin Mohd Saifulizam (A23CS0135)**
