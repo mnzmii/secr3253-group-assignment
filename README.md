@@ -4,5 +4,5 @@
 * **Muhammad Nazmi bin Mohd Saifulizam (A23CS0135)**
 * **Nur Arisha binti Amyrul Naim (A23CS0154)**
 * **Muhammad Khairul Hakimi bin Mohd Khalid (A23CS0133)**
-
+* **Balqis Nabilah binti Muhammad Azwan (A23CS0054)**
 
