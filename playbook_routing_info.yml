@@ -8,3 +8,7 @@
         lines:
           - description Connection to Main Office LAN
         parents: interface GigabitEthernet1
+    - name: Configure static route
+      cisco.ios.ios_config:
+        lines:
+          - ip route 10.10.10.0 255.255.255.0 192.168.1.254
