@@ -1,0 +1,25 @@
+---
+- name: Basic Network Configuration (Part A)
+  hosts: routers
+  gather_facts: no
+  tasks:
+    - name: Configure IP address on interface GigabitEthernet1
+      cisco.ios.ios_config:
+        lines:
+          - ip address 192.168.1.10 255.255.255.0
+          - no shutdown
+        parents: interface GigabitEthernet1
+
+    - name: Configure administrative user account
+      cisco.ios.ios_config:
+        lines:
+          - username admin privilege 15 secret cisco123
+
+    - name: Configure MOTD banner message
+      cisco.ios.ios_config:
+        lines:
+          - banner motd ^C UNAUTHORIZED ACCESS IS PROHIBITED ^C
+
+    - name: Save running configuration to startup config
+      cisco.ios.ios_config:
+        save_when: modified
