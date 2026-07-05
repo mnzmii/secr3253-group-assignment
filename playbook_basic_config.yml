@@ -18,7 +18,7 @@
     - name: Configure MOTD banner message
       cisco.ios.ios_config:
         lines:
-          - banner motd # UNAUTHORIZED ACCESS IS PROHIBITED #
+          - "banner motd # UNAUTHORIZED ACCESS IS PROHIBITED #"
 
     - name: Save running configuration to startup config
       cisco.ios.ios_config:
