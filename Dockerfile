@@ -11,8 +11,16 @@ RUN apt-get update && apt-get install -y \
     procps \
     util-linux
 
-# Install Ansible and NETCONF dependencies
-RUN pip install --no-cache-dir ansible ncclient paramiko
+# Install Ansible and NETCONF dependencies (Including pylibssh for modern SSH support)
+RUN pip install --no-cache-dir ansible ncclient paramiko ansible-pylibssh
+
+# Configure SSH to allow legacy security algorithms for the Cisco CSR1000v
+RUN mkdir -p /root/.ssh && \
+    echo "Host *" > /root/.ssh/config && \
+    echo "    KexAlgorithms +diffie-hellman-group14-sha1,diffie-hellman-group-exchange-sha1" >> /root/.ssh/config && \
+    echo "    HostKeyAlgorithms +ssh-rsa" >> /root/.ssh/config && \
+    echo "    PubkeyAcceptedKeyTypes +ssh-rsa" >> /root/.ssh/config && \
+    chmod 600 /root/.ssh/config
 
 # Copy our project files into the container
 COPY . /app
