@@ -20,22 +20,20 @@ This repository contains the infrastructure and configuration files to automate 
 
 This project is built on a containerized architecture to eliminate cross-platform dependency issues. The Docker container serves as the execution environment, securely pushing configurations to the target network node.
 
-    [ Host Machine (Windows/macOS/Linux) ]
-          │
-          ▼ (Docker Engine)
-    ┌─────────────────────────────────────────────────────────────┐
-    │ 🐳 Docker Container (python:3.10-slim)                      │
-    │                                                             │
-    │  ⚙️ Ansible Environment                                     │
-    │     ├─ ansible.cfg (Host Key Checking Disabled)             │
-    │     └─ hosts (Inventory & Credentials)                      │
-    │                                                             │
-    │         │                                                   │
-    │         ▼ (SSH Connection)                                  ▼ (Local Execution)
-    │  [ Cisco CSR1000v Router ]                          [ sysinfo.sh ]
-    │  IP: 192.168.56.101                                 Extracts local container
-    │  OS: Cisco IOS XE                                   CPU, Memory, & Disk metrics
-    └─────────────────────────────────────────────────────────────┘
+    graph TD
+    Host[Host Machine <br> Windows/macOS/Linux] -->|Runs via Docker Engine| Container
+
+    subgraph Container [🐳 Docker Container: python:3.10-slim]
+        direction TB
+        Ansible[⚙️ Ansible Environment <br> ansible.cfg & hosts]
+        Bash[🖥️ Bash Script <br> sysinfo.sh]
+    end
+
+    Ansible -- SSH Connection --> Router
+
+    subgraph Target [Network Target]
+        Router[🌐 Cisco CSR1000v Router <br> IP: 192.168.56.101 <br> OS: Cisco IOS XE]
+    end
 
 ---
 
