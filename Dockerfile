@@ -4,8 +4,12 @@ FROM python:3.10-slim
 # Set working directory
 WORKDIR /app
 
-# Install SSH tools needed for Ansible to connect to routers
-RUN apt-get update && apt-get install -y openssh-client sshpass
+# Install SSH tools and Linux system monitoring tools for the bash script
+RUN apt-get update && apt-get install -y \
+    openssh-client \
+    sshpass \
+    procps \
+    util-linux
 
 # Install Ansible and NETCONF dependencies
 RUN pip install --no-cache-dir ansible ncclient paramiko
