@@ -12,3 +12,10 @@
       cisco.ios.ios_config:
         lines:
           - ip route 10.10.10.0 255.255.255.0 192.168.1.254
+    - name: Retrieve device information
+      cisco.ios.ios_facts:
+        gather_subset: hardware
+
+    - name: Display retrieved device information
+      debug:
+        msg: "Hostname: {{ ansible_net_hostname }}, Model: {{ ansible_net_model }}, OS Version: {{ ansible_net_version }}"
