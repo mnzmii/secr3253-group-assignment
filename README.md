@@ -20,7 +20,8 @@ This repository contains the infrastructure and configuration files to automate 
 
 This project is built on a containerized architecture to eliminate cross-platform dependency issues. The Docker container serves as the execution environment, securely pushing configurations to the target network node.
 
-    graph TD
+```mermaid
+graph TD
     Host[Host Machine <br> Windows/macOS/Linux] -->|Runs via Docker Engine| Container
 
     subgraph Container [🐳 Docker Container: python:3.10-slim]
@@ -34,7 +35,7 @@ This project is built on a containerized architecture to eliminate cross-platfor
     subgraph Target [Network Target]
         Router[🌐 Cisco CSR1000v Router <br> IP: 192.168.56.101 <br> OS: Cisco IOS XE]
     end
-
+```
 ---
 
 ## 📂 Project Structure
