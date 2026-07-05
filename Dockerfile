@@ -12,3 +12,6 @@ RUN pip install --no-cache-dir ansible ncclient paramiko
 
 # Copy our project files into the container
 COPY . /app
+
+# Default command to keep container running
+CMD ["/bin/bash"]
