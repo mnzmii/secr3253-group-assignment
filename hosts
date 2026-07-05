@@ -1,6 +1,5 @@
 [routers]
-192.168.1.100
-# (Replace 192.168.1.100 with your actual router IP later)
+192.168.56.101
 
 [routers:vars]
 ansible_user=admin
