@@ -18,3 +18,6 @@ lscpu | grep -E "Model name|CPU\(s\):"
 echo ""
 echo "--- Memory Usage ---"
 free -h
+
+# --- End of Part A (Balqis) ---
+# --- Part B (Zikri) continues below ---
