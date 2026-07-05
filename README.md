@@ -20,26 +20,26 @@ This repository contains the infrastructure and configuration files to automate 
 
 This project is built on a containerized architecture to eliminate cross-platform dependency issues. The Docker container serves as the execution environment, securely pushing configurations to the target network node.
 
-[ Host Machine (Windows/macOS/Linux) ]
-       │
-       ▼ (Docker Engine)
-┌──────────────────────────────────────────┐
-│ 🐳 Docker Container (python:3.10-slim)   │
-│                                          │
-│  ⚙️ Ansible Environment                  │
-│     ├─ ansible.cfg                       │
-│     └─ hosts (Credentials)               │
-│                                          │
-│  🖥️ Local Execution                      │
-│     └─ sysinfo.sh (Gets local metrics)   │
-└──────────────────┬───────────────────────┘
-                   │
-                   ▼ (SSH Connection)
-┌──────────────────────────────────────────┐
-│ 🌐 Cisco CSR1000v Router                 │
-│    IP: 192.168.56.101                    │
-│    OS: Cisco IOS XE                      │
-└──────────────────────────────────────────┘
+    [ Host Machine (Windows/macOS/Linux) ]
+           │
+           ▼ (Docker Engine)
+    ┌──────────────────────────────────────────┐
+    │ 🐳 Docker Container (python:3.10-slim)   │
+    │                                          │
+    │  ⚙️ Ansible Environment                  │
+    │     ├─ ansible.cfg                       │
+    │     └─ hosts (Credentials)               │
+    │                                          │
+    │  🖥️ Local Execution                      │
+    │     └─ sysinfo.sh (Gets local metrics)   │
+    └──────────────────┬───────────────────────┘
+                       │
+                       ▼ (SSH Connection)
+    ┌──────────────────────────────────────────┐
+    │ 🌐 Cisco CSR1000v Router                 │
+    │    IP: 192.168.56.101                    │
+    │    OS: Cisco IOS XE                      │
+    └──────────────────────────────────────────┘
 
 ---
 
