@@ -8,11 +8,11 @@ This repository contains the infrastructure and configuration files to automate 
 
 | Name | Matrix ID | Project Role | Specific Tasks Executed |
 | :--- | :--- | :--- | :--- |
-| **Muhammad Nazmi bin Mohd Saifulizam** | `[A23CS0135]` | Infrastructure Lead | • Engineered the Python 3.10 Docker container environment.<br>• Built the `Dockerfile` to install Ansible, Netmiko, and required Linux system tools.<br>• Configured the global `ansible.cfg` and `hosts` inventory to automate connection mappings. |
-| **Nur Arisha binti Amyrul Naim** | `[A23CS0154]` | Network Automation | • Authored `playbook_basic_config.yml` for initial device provisioning.<br>• Configured Loopback0 IPv4 addressing and enabled the interface.<br>• Created privilege 15 admin credentials and deployed the MOTD security banner. |
-| **Muhammad Khairul Hakimi bin Mohd Khalid** | `[A23CS0133]` | Network Automation | • Authored `playbook_routing_info.yml` for network routing.<br>• Configured GigabitEthernet descriptions and deployed static IPv4 routes.<br>• Utilized Ansible modules to dynamically extract and display router hardware/OS facts. |
-| **Balqis Nabilah binti Muhammad Azwan** | `[A23CS0054]` | Linux Administration | • Initiated the `sysinfo.sh` bash script architecture.<br>• Implemented commands to retrieve the container hostname and formatted system date/time.<br>• Utilized `lscpu` to extract and display detailed CPU architecture metrics and core counts. |
-| **Wan Muhammad Afif Zikry bin Wan Ruslan** | `[A23CS0282]` | Linux Administration | • Expanded the `sysinfo.sh` script for deeper resource monitoring.<br>• Engineered parsing for active memory usage and disk partition limits.<br>• Implemented process monitoring to sort and display the top 5 CPU-consuming tasks. |
+| **Muhammad Nazmi bin Mohd Saifulizam** | `A23CS0135` | Infrastructure Lead | • Engineered the Python 3.10 Docker container environment.<br>• Built the `Dockerfile` to install Ansible, Netmiko, and required Linux system tools.<br>• Configured the global `ansible.cfg` and `hosts` inventory to automate connection mappings. |
+| **Nur Arisha binti Amyrul Naim** | `A23CS0154` | Network Automation | • Authored `playbook_basic_config.yml` for initial device provisioning.<br>• Configured Loopback0 IPv4 addressing and enabled the interface.<br>• Created privilege 15 admin credentials and deployed the MOTD security banner. |
+| **Muhammad Khairul Hakimi bin Mohd Khalid** | `A23CS0133` | Network Automation | • Authored `playbook_routing_info.yml` for network routing.<br>• Configured GigabitEthernet descriptions and deployed static IPv4 routes.<br>• Utilized Ansible modules to dynamically extract and display router hardware/OS facts. |
+| **Balqis Nabilah binti Muhammad Azwan** | `A23CS0054` | Linux Administration | • Initiated the `sysinfo.sh` bash script architecture.<br>• Implemented commands to retrieve the container hostname and formatted system date/time.<br>• Utilized `lscpu` to extract and display detailed CPU architecture metrics and core counts. |
+| **Wan Muhammad Afif Zikry bin Wan Ruslan** | `A23CS0282` | Linux Administration | • Expanded the `sysinfo.sh` script for deeper resource monitoring.<br>• Engineered parsing for active memory usage and disk partition limits.<br>• Implemented process monitoring to sort and display the top 5 CPU-consuming tasks. |
 
 ---
 
