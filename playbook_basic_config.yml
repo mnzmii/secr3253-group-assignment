@@ -19,3 +19,7 @@
       cisco.ios.ios_config:
         lines:
           - banner motd ^C UNAUTHORIZED ACCESS IS PROHIBITED ^C
+
+    - name: Save running configuration to startup config
+      cisco.ios.ios_config:
+        save_when: modified
